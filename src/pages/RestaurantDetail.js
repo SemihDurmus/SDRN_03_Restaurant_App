@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Image,
   Dimensions,
+  TouchableOpacity,
 } from 'react-native';
 
 const RestaurantDetail = (props) => {
@@ -51,6 +52,9 @@ const RestaurantDetail = (props) => {
         <View style={styles.infoContainer}>
           <Text style={styles.infoText}>{selectedRestaurant.postal_code}</Text>
         </View>
+        <TouchableOpacity style={styles.reservation}>
+          <Text style={styles.reservation_text}>Make a reservation</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
@@ -72,4 +76,17 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   infoText: {color: '#0a3d62', fontWeight: 'bold'},
+  reservation: {
+    width: Dimensions.get('window').width / 2,
+    alignSelf: 'center',
+    marginTop: 10,
+    backgroundColor: '#d35400',
+    borderRadius: 10,
+  },
+  reservation_text: {
+    textAlign: 'center',
+    padding: 10,
+    fontWeight: 'bold',
+    color: '#FFF',
+  },
 });
