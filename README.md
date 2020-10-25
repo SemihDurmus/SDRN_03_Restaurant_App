@@ -25,7 +25,7 @@
 
 ## Overview
 
-<!-- <img src="src/assets/doubleClick.gif" height="500"> -->
+<img src="src/assets/rest.gif" height="500">
 
 ### Built With
 
