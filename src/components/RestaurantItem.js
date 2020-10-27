@@ -12,7 +12,12 @@ const RestaurantItem = (props) => {
   return (
     <TouchableOpacity style={styles.container} onPress={props.onSelect}>
       <Image style={styles.image} source={{uri: props.restaurant.image_url}} />
-      <Text style={styles.name}>{props.restaurant.name}</Text>
+      <View style={styles.info_line}>
+        <Text style={styles.name}>{props.restaurant.name}</Text>
+        <Text style={styles.name}>
+          {`${'$'.repeat(props.restaurant.price)}`}
+        </Text>
+      </View>
     </TouchableOpacity>
   );
 };
@@ -29,6 +34,12 @@ const styles = StyleSheet.create({
   image: {
     height: Dimensions.get('window').height * 0.3,
     margin: 10,
+  },
+  info_line: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 10,
   },
   name: {
     fontSize: 20,

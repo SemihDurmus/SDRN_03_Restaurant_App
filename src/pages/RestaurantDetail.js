@@ -7,6 +7,7 @@ import {
   Image,
   Dimensions,
   TouchableOpacity,
+  Linking,
 } from 'react-native';
 
 const RestaurantDetail = (props) => {
@@ -52,7 +53,11 @@ const RestaurantDetail = (props) => {
         <View style={styles.infoContainer}>
           <Text style={styles.infoText}>{selectedRestaurant.postal_code}</Text>
         </View>
-        <TouchableOpacity style={styles.reservation}>
+        <TouchableOpacity
+          style={styles.reservation}
+          onPress={() =>
+            Linking.openURL(selectedRestaurant.mobile_reserve_url)
+          }>
           <Text style={styles.reservation_text}>Make a reservation</Text>
         </TouchableOpacity>
       </View>
