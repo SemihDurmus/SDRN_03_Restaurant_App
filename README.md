@@ -25,7 +25,7 @@
 
 ## Overview
 
-<img src="src/assets/rest.gif" height="500">
+<img src="src/assets/rest1.gif" height="500">
 
 ### Built With
 
@@ -42,6 +42,7 @@ This app comprises use of Stack Navigation and RESTFUL Web APIs
 - When the user finds the desired city and taps on it, a new page opens showing a list of restaurants in chosen city. Information here comprises an image and the name of the restaurants. Since the API source does not offer different images, only a default graphical was used all through the app.
 - The user either scrolls or types letters to search bar to choose a restaurant. 
 - When the user taps on the image of the chosen restaurent, a new page showing the detailed information of the restaurant opens. 
+- User can be diverted to each restaurant's reservation URL by clicking on the "make a reservation" button.
 
 ## How To Use
 
